@@ -1,0 +1,1 @@
+A Pidgin/libpurple plugin that lets you set your text to be bold/underline/italics/whatever in IRC chats/IMs.  With great power comes great responsibility.
