@@ -1,5 +1,7 @@
 A Pidgin/libpurple plugin that lets you send italic/bold/underlined/colored text, and view the same in return.
 
+Forked from https://code.google.com/p/pidgin-irc-format/, originally by Eion Robb <eionrobb@gmail.com>.
+
 ## Compilation / Installation
 ### Debian / Linux
 You'll need at least `pidgin-dev` and `gcc` installed, and maybe a couple of others I don't know about.
@@ -11,13 +13,12 @@ make
 make install
 ```
 
-### Mac/PC
+### Mac / PC
 
 ???
 
 Pull requests welcome.
 
-Forked from https://code.google.com/p/pidgin-irc-format/, originally by Eion Robb <eionrobb@gmail.com>.
 
 ## License
 
