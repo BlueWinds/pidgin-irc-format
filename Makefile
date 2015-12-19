@@ -7,7 +7,7 @@ LINUX_PPC_COMPILER = powerpc-unknown-linux-gnu-gcc
 FREEBSD60_COMPILER = i686-pc-freebsd6.0-gcc
 MACPORT_COMPILER = i686-apple-darwin9-gcc-4.0.1
 
-LIBPURPLE_CFLAGS = -I/usr/include/libpurple -I/usr/local/include/libpurple 
+LIBPURPLE_CFLAGS = -I/usr/include/libpurple -I/usr/local/include/libpurple
 GLIB_CFLAGS = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include/ -I/usr/include -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include -I/usr/local/include
 WIN32_DEV_DIR = /root/pidgin/win32-dev
 WIN32_PIDGIN_DIR = /root/pidgin/pidgin-2.3.0_win32
@@ -19,14 +19,15 @@ DEB_PACKAGE_DIR = ./debdir
 
 SOURCES = \
 	pidgin-irc-format.c
-	
+
 #Standard stuff here
 .PHONY:	all clean install sourcepackage
 
-all:	irc_format.dll irc_format.so
+all:	clean irc_format.so
 
 install:
-	cp irc_format.so /usr/lib/purple-2/
+	cp irc_format.so ~/.purple/plugins/
+
 clean:
 	rm -f irc_format.dll irc_format.so
 
