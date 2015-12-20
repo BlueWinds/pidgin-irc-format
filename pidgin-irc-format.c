@@ -168,7 +168,10 @@ plugin_load(PurplePlugin *plugin)
 	conns = purple_connections_get_all();
 	for(; conns; conns = conns->next)
 	{
-		ircformat_enable_formatting_on_connection(conns->data);
+		PurpleConnection *pc = conns->data;
+		if (!g_str_equal(pc->account->protocol_id, "prpl-irc"))
+			continue;
+		ircformat_enable_formatting_on_connection(pc);
 	}
 
 	return TRUE;
@@ -182,7 +185,10 @@ plugin_unload(PurplePlugin *plugin)
 	conns = purple_connections_get_all();
 	for(; conns; conns = conns->next)
 	{
-		ircformat_disable_formatting_on_connection(conns->data);
+		PurpleConnection *pc = conns->data;
+		if (!g_str_equal(pc->account->protocol_id, "prpl-irc"))
+			continue;
+		ircformat_disable_formatting_on_connection(pc);
 	}
 
 	return TRUE;
