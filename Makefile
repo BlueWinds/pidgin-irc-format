@@ -28,6 +28,9 @@ all:	clean irc_format.so
 install:
 	cp irc_format.so ~/.purple/plugins/
 
+uninstall:
+	rm ~/.purple/plugins/irc_format.so
+
 clean:
 	rm -f irc_format.dll irc_format.so
 
