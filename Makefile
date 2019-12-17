@@ -7,8 +7,8 @@ LINUX_PPC_COMPILER = powerpc-unknown-linux-gnu-gcc
 FREEBSD60_COMPILER = i686-pc-freebsd6.0-gcc
 MACPORT_COMPILER = i686-apple-darwin9-gcc-4.0.1
 
-LIBPURPLE_CFLAGS = $(shell pkgconf --cflags purple)
-GTK_CFLAGS = $(shell pkgconf --cflags gtk+-2.0)
+LIBPURPLE_CFLAGS = $(shell pkg-config --cflags purple)
+GTK_CFLAGS = $(shell pkg-config --cflags gtk+-2.0)
 WIN32_DEV_DIR = /root/pidgin/win32-dev
 WIN32_PIDGIN_DIR = /root/pidgin/pidgin-2.3.0_win32
 WIN32_CFLAGS = -I${WIN32_DEV_DIR}/gtk_2_0/include/glib-2.0 -I${WIN32_PIDGIN_DIR}/libpurple/win32 -I${WIN32_PIDGIN_DIR}/pidgin/win32 -I${WIN32_DEV_DIR}/gtk_2_0/include -I${WIN32_DEV_DIR}/gtk_2_0/include/glib-2.0 -I${WIN32_DEV_DIR}/gtk_2_0/lib/glib-2.0/include -I${WIN32_DEV_DIR}/gtk_2_0/lib/gtk-2.0/include -Wno-format
