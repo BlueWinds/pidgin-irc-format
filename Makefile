@@ -7,7 +7,7 @@ LINUX_PPC_COMPILER = powerpc-unknown-linux-gnu-gcc
 FREEBSD60_COMPILER = i686-pc-freebsd6.0-gcc
 MACPORT_COMPILER = i686-apple-darwin9-gcc-4.0.1
 
-LIBPURPLE_CFLAGS = $(shell pkg-config --cflags purple)
+LIBPURPLE_CFLAGS = $(shell command -v  pkgconf > /dev/null && pkgconf --cflags purple || pkg-config --cflags purple)
 GTK_CFLAGS = $(shell pkg-config --cflags gtk+-2.0)
 WIN32_DEV_DIR = /root/pidgin/win32-dev
 WIN32_PIDGIN_DIR = /root/pidgin/pidgin-2.3.0_win32
